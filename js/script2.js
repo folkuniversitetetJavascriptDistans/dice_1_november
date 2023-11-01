@@ -39,12 +39,14 @@ document.querySelector("button").addEventListener("click", () => {
     // Announc winner
     setTimeout(() => {
       alert(`you made it in ${throws}`);
-      location.reload();
-      /* const elements = document.querySelectorAll("[class*=dots-]");
+      /*    location.reload(); */ // laddar om sidan lösning 1
+      const elements = document.querySelectorAll("[class*=dots-]:not(#dice)");
       elements.forEach((element) => {
         element.classList.add("faded");
       });
-      document.getElementById("dice").classList.add("dice"); */
+      document.querySelector("#dice").classList = "";
+      document.getElementById("dice").classList.add("dice");
+      document.querySelector("button").innerHTML = `Kasta`;
     }, 100);
 
     // reset game
